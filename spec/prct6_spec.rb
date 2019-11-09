@@ -55,5 +55,38 @@ RSpec.describe Prct6 do
 			expect(@a1.to_s).to be nil
 		end
 	end
+
+	describe "Obtención de datos" do
+
+		# Prueba obtener nombre
+		it "Obtiene nombre" do
+			expect(@a1.nombre).to eq("Carne de vaca")
+		end
+
+		# Prueba obtener proteinas
+		it "Obtiene proteinas" do
+			expect(@a1.proteinas).to eq(21.1)
+		end
+
+		# Prueba obtener carbohidratos
+		it "Obtiene carbohidratos" do
+			expect(@a1.carbohidratos).to eq(0.0)
+		end
+
+		# Prueba obtener lipidos
+		it "Obtiene lipidos" do
+			expect(@a1.lipidos).to eq(3.1)
+		end
+
+		# Prueba obtener GEI
+		it "Obtiene GEI" do
+			expect(@a1.gei).to eq(50.0)
+		end
+
+		# Prueba obtener terreno
+		it "Obtiene terreno" do
+			expect(@a1.terreno).to eq(164.0)
+		end
+	end
   end
 end
