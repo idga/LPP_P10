@@ -7,8 +7,12 @@ RSpec.describe Prct6 do
   describe Alimento do
 
 	before :each do
-		
+		@a1 = Alimento.new()
+	end
+
+	# Prueba creación Alimento
+	it "Se crea Alimento" do
+		expect(@a1).not_to be nil
 	end
   end
-
 end
