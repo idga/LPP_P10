@@ -7,7 +7,7 @@ RSpec.describe Prct6 do
   describe Alimento do
 
 	before :each do
-		@a1 = Alimento.new()
+		@a1 = Alimento.new("Carne de vaca")
 	end
 
 	# Prueba creación Alimento

@@ -6,4 +6,9 @@ end
 
 class Alimento
 
+	attr_accessor :nombre
+
+	def initialize(n)
+		@nombre = n
+	end
 end
