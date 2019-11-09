@@ -16,9 +16,15 @@ RSpec.describe Prct6 do
 	end
 
 	describe "Creacion de datos" do
-
+		
+		# Prueba nombre
 		it "Existe nombre" do
 			expect(@a1.nombre).not_to be nil
+		end
+
+		# Prueba proteínas
+		it "Existe proteinas" do
+			expect(@a1.proteinas).not_to be nil
 		end
 	end
   end
