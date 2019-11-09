@@ -6,12 +6,13 @@ end
 
 class Alimento
 
-	attr_accessor :nombre, :proteinas, :carbohidratos, :lipidos
+	attr_accessor :nombre, :proteinas, :carbohidratos, :lipidos, :gei
 
-	def initialize(n,p,c,l)
+	def initialize(n,p,c,l,g)
 		@nombre = n
 		@proteinas = p
 		@carbohidratos = c
 		@lipidos = l
+		@gei = g
 	end
 end
