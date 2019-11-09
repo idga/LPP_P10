@@ -14,5 +14,12 @@ RSpec.describe Prct6 do
 	it "Se crea Alimento" do
 		expect(@a1).not_to be nil
 	end
+
+	describe "Creacion de datos" do
+
+		it "Existe nombre" do
+			expect(@a1.nombre).not_to be nil
+		end
+	end
   end
 end
