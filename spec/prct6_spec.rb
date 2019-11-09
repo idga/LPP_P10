@@ -36,6 +36,11 @@ RSpec.describe Prct6 do
 		it "Existe lípidos" do
 			expect(@a1.lipidos).not_to be nil
 		end
+
+		# Prueba GEI
+		it "Existe GEI" do
+			expect(@a1.gei).not_to be nil
+		end
 	end
   end
 end
