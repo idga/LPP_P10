@@ -47,5 +47,13 @@ RSpec.describe Prct6 do
 			expect(@a1.terreno).not_to be nil
 		end
 	end
+
+	describe "Información" do
+		
+		# Prueba mostrar datos
+		it "Muestra datos" do
+			expect(@a1.to_s).to be nil
+		end
+	end
   end
 end
