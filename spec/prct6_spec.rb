@@ -41,6 +41,11 @@ RSpec.describe Prct6 do
 		it "Existe GEI" do
 			expect(@a1.gei).not_to be nil
 		end
+
+		# Prueba terreno
+		it "Existe terreno" do
+			expect(@a1.terreno).not_to be nil
+		end
 	end
   end
 end
