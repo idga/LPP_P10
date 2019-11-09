@@ -6,9 +6,10 @@ end
 
 class Alimento
 
-	attr_accessor :nombre
+	attr_accessor :nombre, :proteinas
 
-	def initialize(n)
+	def initialize(n,p)
 		@nombre = n
+		@proteinas = p
 	end
 end
