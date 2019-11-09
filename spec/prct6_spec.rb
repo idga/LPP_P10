@@ -26,6 +26,11 @@ RSpec.describe Prct6 do
 		it "Existe proteinas" do
 			expect(@a1.proteinas).not_to be nil
 		end
+
+		# Prueba carbohidratos
+		it "Existe carbohidratos" do
+			expect(@a1.carbohidratos).not_to be nil
+		end
 	end
   end
 end
