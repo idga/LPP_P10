@@ -16,4 +16,14 @@ class Alimento
 		@gei = g
 		@terreno = t
 	end
+
+	def to_s
+
+		puts "-- #{@nombre} --"
+		puts "Proteinas: #{@proteinas}"
+		puts "Carbohidratos: #{@carbohidratos}"
+		puts "Lipidos: #{@lipidos}"
+		puts "GEI: #{@gei}"
+		puts "Terreno: #{@terreno}"
+	end
 end
