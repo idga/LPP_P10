@@ -32,4 +32,9 @@ class Alimento
 
 		"#{(valorE/30.0).round}% IDR Kcal - Proteinas #{proteinas}g/54g"
 	end
+
+	def impactoM
+
+		"#{(valorE/23.0).round}% IDR Kcal - Proteinas #{proteinas}g/41g"
+	end
 end
