@@ -23,4 +23,8 @@ class Alimento
 		puts "Terreno: #{@terreno}"
 	end
 
+	def impactoH
+
+		"#{(valorE/30.0).round}% Kcal - Proteinas #{proteinas}g/54g"
+	end
 end
