@@ -95,7 +95,7 @@ RSpec.describe Prct6 do
 		
 		# Prueba calculo impacto hombre
 		it "Impacto ambiental hombre" do
-			expect(@a1.impactoH).to eq(3000)
+			expect(@a1.impactoH).to eq("4% IDR Kcal - Proteinas 21.1g/54g")
 		end
 	end
   end

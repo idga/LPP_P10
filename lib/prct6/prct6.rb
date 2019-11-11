@@ -23,8 +23,13 @@ class Alimento
 		puts "Terreno: #{@terreno}"
 	end
 
+	def valorE()
+
+		@carbohidratos * 4 + @lipidos * 9 + @proteinas * 4
+	end
+
 	def impactoH
 
-		"#{(valorE/30.0).round}% Kcal - Proteinas #{proteinas}g/54g"
+		"#{(valorE/30.0).round}% IDR Kcal - Proteinas #{proteinas}g/54g"
 	end
 end
