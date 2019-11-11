@@ -88,5 +88,13 @@ RSpec.describe Prct6 do
 			expect(@a1.terreno).to eq(164.0)
 		end
 	end
+
+	describe "Cálculo impactos" do
+		
+		# Prueba calculo impacto hombre
+		it "Impacto ambiental hombre" do
+			# expect(@a1.impactoH).to eq(3000)
+		end
+	end
   end
 end
