@@ -22,4 +22,5 @@ class Alimento
 		puts "GEI: #{@gei}"
 		puts "Terreno: #{@terreno}"
 	end
+
 end

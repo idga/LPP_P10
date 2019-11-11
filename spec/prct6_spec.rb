@@ -8,6 +8,8 @@ RSpec.describe Prct6 do
 
 	before :each do
 		@a1 = Alimento.new("Carne de vaca",21.1,0.0,3.1,50.0,164.0)
+		
+		@p1 = [@a1]
 	end
 
 	# Prueba creación Alimento
@@ -93,7 +95,7 @@ RSpec.describe Prct6 do
 		
 		# Prueba calculo impacto hombre
 		it "Impacto ambiental hombre" do
-			# expect(@a1.impactoH).to eq(3000)
+			expect(@a1.impactoH).to eq(3000)
 		end
 	end
   end
