@@ -14,9 +14,14 @@ RSpec.describe Prct6 do
 		@a4 = Alimento.new("Cerveza",0.5,3.6,0.0,0.24,0.22)
 		@a5 = Alimento.new("Cafe",0.1,0.0,0.0,0.4,0.3)
 		@a6 = Alimento.new("Salmon",19.9,0.0,13.6,6.0,3.7)		
+		@a7 = Alimento.new("Chocolate",5.3,47.0,30.0,2.3,3.4)
+		@a8 = Alimento.new("Lentejas",23.5,52.0,1.4,0.4,3.4)
+		@a9 = Alimento.new("Nuez",20.0,21.0,54.0,0.3,7.9)		
+		@a10 = Alimento.new("Huevo",13.0,1.1,11.0,4.2,5.7)
+		@a11 = Alimento.new("Tofu",8.0,1.9,4.8,2.0,2.2)
 
 		# Hombre
-		#@hombre = [@a2,@a2,@a3,@a4,@a5,@a5]
+		@hombre = [@a9,@a7,@a7,@a7,@a7,@a11,@a3,@a4,@a4,@a4]
 
 		# Mujer
 		#@mujer = [@a1,@a6]
@@ -104,16 +109,23 @@ RSpec.describe Prct6 do
 	describe "Cálculo impactos" do
 
 		# Prueba calculo impacto hombre
-		it "Impacto ambiental hombre" do
+		it "Impacto ambiental hombre [Valor energético]" do
 		
 			contve = 0
-			contp = 0
 			
 			@hombre.each do |a|
 				contve += a.valorE
+			end
+			expect(contve).to eq(2760.0)
+		end
+
+		it "Impacto ambiental hombre [proteinas]" do
+			contp = 0
+
+			@hombre.each do |a|
 				contp += a.proteinas
 			end
-			expect(contve).to eq(3000)
+			expect(contp).to eq(53.99999999999999)
 		end	
 	end
   end
