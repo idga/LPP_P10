@@ -119,13 +119,33 @@ RSpec.describe Prct6 do
 			expect(contve).to eq(2760.0)
 		end
 
-		it "Impacto ambiental hombre [proteinas]" do
+		it "Impacto ambiental hombre [Proteinas]" do
 			contp = 0
 
 			@hombre.each do |a|
 				contp += a.proteinas
 			end
 			expect(contp).to eq(53.99999999999999)
+		end
+
+	 	# Prueba calculo impacto mujer
+		it "Impacto ambiental mujer [Valor energético]" do
+			
+			contve = 0
+
+			@mujer.each do |a|
+				contve += a.valorE
+			end
+			expect(contve).to eq(2300)
+		end
+
+		it "Impacto ambiental mujer [Proteinas]" do
+			contp = 0
+
+			@mujer.each do |a|
+				contp += a.proteinas
+			end
+			expect(contp).to eq(41)
 		end	
 	end
   end
