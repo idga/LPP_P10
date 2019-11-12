@@ -24,7 +24,7 @@ RSpec.describe Prct6 do
 		@hombre = [@a9,@a7,@a7,@a7,@a7,@a11,@a3,@a4,@a4,@a4]
 
 		# Mujer
-		#@mujer = [@a1,@a6]
+		@mujer = [@a9,@a7,@a7,@a7,@a3,@a4,@a4,@a4,@a5,@a5,@a5]
 	end
 
 	# Prueba creación Alimento
@@ -136,7 +136,7 @@ RSpec.describe Prct6 do
 			@mujer.each do |a|
 				contve += a.valorE
 			end
-			expect(contve).to eq(2300)
+			expect(contve).to eq(2199.2000000000003)
 		end
 
 		it "Impacto ambiental mujer [Proteinas]" do
