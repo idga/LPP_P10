@@ -24,19 +24,32 @@ RSpec.describe List do
 
 		# Dieta vasca
 		@dieta_vasca = List.new()
-		@dieta_vasca.insert([@a1,@a1,@a1,@a10])
+		@dieta_vasca.insert(@a1)
+		@dieta_vasca.insert(@a1)
+		@dieta_vasca.insert(@a1)
+		@dieta_vasca.insert(@a10)
 
 		# Dieta vegetaria
 		@dieta_vegetaria = List.new()
-		@dieta_vegetaria.insert([@a10,@a10,@a3,@a3])
+		@dieta_vegetaria.insert(@a10)
+		@dieta_vegetaria.insert(@a10)
+		@dieta_vegetaria.insert(@a3)
+		@dieta_vegetaria.insert(@a3)
 
 		# Dieta vegetariana
 		@dieta_vegetariana = List.new()
-		@dieta_vegetariana.insert([@a5,@a7,@a8,@a9,@a11])
+		@dieta_vegetariana.insert(@a5)
+		@dieta_vegetariana.insert(@a7)
+		@dieta_vegetariana.insert(@a8)
+		@dieta_vegetariana.insert(@a9)
+		@dieta_vegetariana.insert(@a11)
 
 		# Dieta carne
 		@dieta_carne = List.new()
-		@dieta_carne.insert([@a1,@a1,@a10,@a10])
+		@dieta_carne.insert(@a1)
+		@dieta_carne.insert(@a1)
+		@dieta_carne.insert(@a10)
+		@dieta_carne.insert(@a10)
 	end
 
 	context 'Modificaciones lista' do
@@ -84,6 +97,10 @@ RSpec.describe List do
 
 		it "Emision gases efecto invernadero" do
 			expect(@dieta_espanola.gei).to eq(65.6)
+			expect(@dieta_vasca.gei).to eq(154.2)
+			expect(@dieta_vegetaria.gei).to eq(14.8)
+			expect(@dieta_vegetariana.gei).to eq(5.3999999999999995)
+			expect(@dieta_carne.gei).to eq(108.4)
 		end
 	end
 end
