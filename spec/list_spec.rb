@@ -112,7 +112,11 @@ RSpec.describe List do
 		end
 
 		it "Uso de terreno" do
-			expect(@dieta_espanola.terreno).to eq(100)
+			expect(@dieta_espanola.terreno).to eq(214.1)
+			expect(@dieta_vasca.terreno).to eq(497.7)
+			expect(@dieta_vegetaria.terreno).to eq(29.200000000000003)
+			expect(@dieta_vegetariana.terreno).to eq(17.2)
+			expect(@dieta_carne.terreno).to eq(339.4)
 		end
 	end
 end

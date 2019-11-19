@@ -91,4 +91,14 @@ class List
 		end
 		return cont
 	end
+
+	def terreno
+		cont = 0
+		n = @head
+		while !(n.nil?)
+			cont += n.dato.terreno
+			n = n.next
+		end
+		return cont
+	end
 end
