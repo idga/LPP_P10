@@ -6,4 +6,8 @@ class List
 		@head = nil
 		@tail = nil
 	end
+
+	def insert(a)
+		n = Node.new(a,nil.nil)
+	end
 end
