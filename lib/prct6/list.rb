@@ -30,4 +30,20 @@ class List
 	def empty
 		@head.nil?
 	end
+
+	def shift
+		if self.empty
+			return nil
+		else
+			# Si solo hay un elemento
+			if @tail == @head
+				@tail = nil
+				@head = nil
+			# Si tiene mas de un elemento
+			else
+				@head = @head.next
+				return @head
+			end
+		end
+	end
 end
