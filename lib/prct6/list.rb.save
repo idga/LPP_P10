@@ -2,7 +2,7 @@ Node = Struct.new(:dato, :next, :prev)
 
 class List
 	
-	attr_accessor :dato, :head, :tail
+	attr_accessor :head, :tail
 
 	def initialize()
 		@head = nil
@@ -76,19 +76,6 @@ class List
 	end
 
 	def to_s
-		n = @head
-		while !(n.nil?)
-			n = n.next
-		end
-	end
-
-	def gei
-		cont = 0
-		n = @head
-		while !(n.nil?)
-			cont += n.dato.gei
-			n = n.next
-		end
-		return cont
+		
 	end
 end

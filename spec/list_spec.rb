@@ -17,7 +17,10 @@ RSpec.describe List do
 		
 		# Dieta espanola
 		@dieta_espanola = List.new()
-		@dieta_espanola.insert([@a1,@a2,@a8,@a10])
+		@dieta_espanola.insert(@a1)
+		@dieta_espanola.insert(@a2)
+		@dieta_espanola.insert(@a8)
+		@dieta_espanola.insert(@a10)
 
 		# Dieta vasca
 		@dieta_vasca = List.new()
@@ -80,7 +83,7 @@ RSpec.describe List do
 	context 'Dietas' do
 
 		it "Emision gases efecto invernadero" do
-			expect(@l1.gei).to eq(1)
+			expect(@dieta_espanola.gei).to eq(65.6)
 		end
 	end
 end
