@@ -29,5 +29,12 @@ RSpec.describe List do
 			expect(@l.shift).equal?(Node)
 			expect(@l.empty).to be true
 		end
+
+		it "Extraccion por la cola" do
+			expect(@l.insert(@a1)).equal?(Node)
+			expect(@l.insert(@a2)).equal?(Node)
+			expect(@l.empty).to be false
+			expect(@l.pop).equal?(Node)
+		end
 	end
 end
