@@ -30,7 +30,8 @@ class List
 	def empty
 		@head.nil?
 	end
-
+	
+	# Extraccion por la cabeza
 	def shift
 		if self.empty
 			return nil
@@ -43,6 +44,23 @@ class List
 			else
 				@head = @head.next
 				return @head
+			end
+		end
+	end
+
+	# Extraccion por la cola
+	def pop
+		if self.empty
+			return nill
+		else
+			if @tail == @head
+				@tail = nil
+				@head = nil
+			else
+				sw = @tail
+				@tail = sw.prev
+				@tail.next = nil
+				return sw
 			end
 		end
 	end
