@@ -37,4 +37,14 @@ RSpec.describe List do
 			expect(@l.pop).equal?(Node)
 		end
 	end
+
+	context 'Consultas lista' do
+
+		it "Devuelve tamaño" do
+			expect(@l.insert(@a1)).equal?(Node)
+			expect(@l.size).to eq(1)
+			expect(@l.insert(@a2)).equal?(Node)
+			expect(@l.size).to eq(2) 
+		end
+	end
 end
