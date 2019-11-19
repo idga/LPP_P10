@@ -22,5 +22,12 @@ RSpec.describe List do
 		it "Lista vacia" do
 			expect(@l.empty).to be true
 		end
+
+		it "Extraccion por la cabeza" do
+			expect(@l.insert(@a1)).equal?(Node)
+			expect(@l.empty).to be false
+			expect(@l.shift).equal?(Node)
+			expect(@l.empty).to be true
+		end
 	end
 end
