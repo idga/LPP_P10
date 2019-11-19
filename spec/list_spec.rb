@@ -110,5 +110,9 @@ RSpec.describe List do
 			expect(@dieta_vegetariana.gei * 365).to eq(1970.9999999999998)
 			expect(@dieta_carne.gei * 365).to eq(39566.0)
 		end
+
+		it "Uso de terreno" do
+			expect(@dieta_espanola.terreno).to eq(100)
+		end
 	end
 end
