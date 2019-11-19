@@ -12,4 +12,8 @@ class List
 	def insert(a)
 		n = Node.new(a,nil,nil)
 	end
+
+	def empty
+		@head.nil?
+	end
 end

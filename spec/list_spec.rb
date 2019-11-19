@@ -20,7 +20,7 @@ RSpec.describe List do
 		end
 
 		it "Lista vacia" do
-			expect(@l1.empty).to be true
+			expect(@l.empty).to be true
 		end
 	end
 end
