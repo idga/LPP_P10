@@ -95,12 +95,20 @@ RSpec.describe List do
 
 	context 'Dietas' do
 
-		it "Emision gases efecto invernadero" do
+		it "Emision gases efecto invernadero (diarias)" do
 			expect(@dieta_espanola.gei).to eq(65.6)
 			expect(@dieta_vasca.gei).to eq(154.2)
 			expect(@dieta_vegetaria.gei).to eq(14.8)
 			expect(@dieta_vegetariana.gei).to eq(5.3999999999999995)
 			expect(@dieta_carne.gei).to eq(108.4)
+		end
+
+		it "Emisiones gases efecto invernadero (anuales)" do
+			expect(@dieta_espanola.gei * 365).to eq(23943.999999999996)
+			expect(@dieta_vasca.gei * 365).to eq(56282.99999999999)
+			expect(@dieta_vegetaria.gei * 365).to eq(5402.0)
+			expect(@dieta_vegetariana.gei * 365).to eq(1970.9999999999998)
+			expect(@dieta_carne.gei * 365).to eq(39566.0)
 		end
 	end
 end
