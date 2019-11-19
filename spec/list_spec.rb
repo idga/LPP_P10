@@ -1,4 +1,4 @@
-Rspec.describe Lista do
+RSpec.describe List do
 
 
 end
