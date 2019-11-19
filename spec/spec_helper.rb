@@ -1,5 +1,6 @@
 require "bundler/setup"
 require "prct6"
+require "prct6/list"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
