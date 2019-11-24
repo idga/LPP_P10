@@ -156,7 +156,7 @@ RSpec.describe Prct6 do
 		end
 		
 		it "Compara alimentos (=)" do
-			expect(@a1 = @a1).to be true
+			expect(@a1 == @a1).to be true
 		end
 
 		it "Compara alimentos (>)" do

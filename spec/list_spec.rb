@@ -119,4 +119,11 @@ RSpec.describe List do
 			expect(@dieta_carne.terreno).to eq(339.4)
 		end
 	end
+
+	context 'Recorrido' do
+
+		it "Metodo min" do
+			expect(@dieta_espanola.min).to eq(0)
+		end
+	end
 end
