@@ -4,6 +4,8 @@ class Alimento
 
 	attr_accessor :nombre, :proteinas, :carbohidratos, :lipidos, :gei, :terreno
 
+	include Comparable
+
 	def initialize(n,p,c,l,g,t)
 		@nombre = n
 		@proteinas = p
@@ -26,5 +28,9 @@ class Alimento
 	def valorE()
 
 		@carbohidratos * 4 + @lipidos * 9 + @proteinas * 4
+	end
+
+	def <=>(other)
+		self.valorE() <=> other.valorE()
 	end
 end
