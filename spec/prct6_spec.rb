@@ -149,10 +149,18 @@ RSpec.describe Prct6 do
 		end	
 	end
 
-	describe "Comparacion" do
+	describe "Comparacion (nutricional)" do
 
-		it "Compara alimentos" do
+		it "Compara alimentos (<)" do
 			expect(@a1 < @a2).to be true
+		end
+		
+		it "Compara alimentos (=)" do
+			expect(@a1 = @a1).to be true
+		end
+
+		it "Compara alimentos (>)" do
+			expect(@a2 > @a1).to be true
 		end
 	end
   end
