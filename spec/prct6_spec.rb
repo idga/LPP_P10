@@ -148,5 +148,12 @@ RSpec.describe Prct6 do
 			expect(contp).to eq(41)
 		end	
 	end
+
+	describe "Comparacion" do
+
+		it "Compara alimentos" do
+			expect(@a1 < @a2).to be true
+		end
+	end
   end
 end
