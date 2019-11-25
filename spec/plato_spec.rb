@@ -77,5 +77,24 @@ RSpec.describe PlatoEnergia do
 		it "Estimacion terreno" do
 			expect(@pe2.terreno.round(2)).to eq(377.9)
 		end
+
+		it "Clase del objeto" do
+			expect(@pe2.class).to eq(PlatoAmbiental)
+		end
+
+		it "Clase del padre" do
+			expect(@pe2.class.superclass).to eq(PlatoEnergia)
+		end
+
+		it "Ancestros" do
+			expect(@pe2.class.ancestors.include? (Object)).to be true
+			expect(@pe2.class.ancestors.include? (BasicObject)).to be true
+		end
+
+		it "Prueba de tipo" do
+			expect(@pe2).to be_a_kind_of(PlatoAmbiental)
+			expect(@pe2).to be_a_kind_of(PlatoEnergia)
+		end
+
 	end	
 end
