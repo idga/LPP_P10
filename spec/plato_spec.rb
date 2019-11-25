@@ -23,6 +23,7 @@ RSpec.describe PlatoEnergia do
 
 		# Plato de ejemplo
 		@pe = PlatoEnergia.new(@l1)
+		@pe.set_gramos()
 
 	end
 
@@ -37,10 +38,11 @@ RSpec.describe PlatoEnergia do
 		end
 
 		it "Existe conjunto de cantidades de alimentos en gramos" do
-			@pe.set_gramos()
 			expect(@pe.gramos).not_to be nil
 		end
-	end
 
-	
+		it "Porcentaje proteinas" do
+			expect(@pe.pproteinas).to be(10)
+		end
+	end	
 end
