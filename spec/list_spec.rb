@@ -125,5 +125,21 @@ RSpec.describe List do
 		it "Metodo min" do
 			expect(@dieta_espanola.min).to eq(@a1)
 		end
+
+		it "Metodo max" do
+			expect(@dieta_espanola.max).to eq(@a2)
+		end
+
+		it "Metodo select" do
+			expect(@dieta_espanola.select {|i|}).to eq([])
+		end
+
+		it "Metodo collect" do
+			expect(@dieta_espanola.collect {|i| i.terreno+0}).to eq([164.0,164.0,41.0,3.4,5.7])
+		end
+
+		it "Metodo sort" do
+			expect(@dieta_espanola.sort).to eq([@a1,@a1,@a10,@a8,@a2])
+		end
 	end
 end
