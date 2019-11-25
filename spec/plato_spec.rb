@@ -40,6 +40,9 @@ RSpec.describe PlatoEnergia do
 		it "Existe conjunto de cantidades de alimentos en gramos" do
 			expect(@pe.gramos).not_to be nil
 		end
+	end
+
+	context 'Cantidades' do
 
 		it "Porcentaje proteinas" do
 			expect(@pe.pproteinas.round(2)).to be(49.23)
@@ -51,6 +54,10 @@ RSpec.describe PlatoEnergia do
 
 		it "Porcentaje hidratos de carbono" do
 			expect(@pe.pcarbohidratos.round(2)).to eq(4.26)
+		end
+
+		it "Valor Calorico Total" do
+			expect(@pe.vct.round(2)).to eq(10)
 		end
 	end	
 end
