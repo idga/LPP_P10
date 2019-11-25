@@ -33,8 +33,11 @@ RSpec.describe PlatoEnergia do
 
 		@dieta_espanola = List.new()
 		@al1 = [@a1,@a2,@a8,@a10]    # Alimentos <- Alimento
+		@al11 = [@a1,@a1]
 		@pa1 = PlatoAmbiental.new(@al1) # Plato <- Alimentos
+		@pa11 = PlatoAmbiental.new(@al11)
 		@dieta_espanola.insert(@pa1) # Dieta <- Plato
+		@dieta_espanola.insert(@pa11)
 
                	# Dieta vasca
                 @dieta_vasca = List.new()
@@ -51,17 +54,32 @@ RSpec.describe PlatoEnergia do
 		# Dieta vegetaria
                 @dieta_vegetaria = List.new()
                 @al3 = [@a10,@a10,@a3,@a3]
+		@al31 = [@a10,@a3]
+		@al32 = [@a10,@a10]
                 @pa3 = PlatoAmbiental.new(@al3)
+		@pa31 = PlatoAmbiental.new(@al31)
+		@pa32 = PlatoAmbiental.new(@al32)
+		@dieta_vegetaria.insert(@pa3)
+		@dieta_vegetaria.insert(@pa31)
+		@dieta_vegetaria.insert(@pa32)
                 
 		# Dieta vegetariana
                 @dieta_vegetariana = List.new()
                 @al4 = [@a5,@a7,@a8,@a9,@a11]
+		@al41 = [@a5,@a9]
                 @pa4 = PlatoAmbiental.new(@al4)
+		@pa41 = PlatoAmbiental.new(@al41)
+		@dieta_vegetariana.insert(@pa4)
+		@dieta_vegetariana.insert(@pa41)
                 
 		# Dieta carne
                 @dieta_carne = List.new()
                 @al5 = [@a1,@a1,@a10,@a10]
+		@al51 = [@a10,@a1]
                 @pa5 = PlatoAmbiental.new(@al5)
+		@pa51 = PlatoAmbiental.new(@al51)
+		@dieta_carne.insert(@pa5)
+		@dieta_carne.insert(@pa51)
 	end
 
 	context 'Estructura plato' do
@@ -149,19 +167,34 @@ RSpec.describe PlatoEnergia do
 	context 'Enumeracion de platos' do
 		it "Metodo min" do
 			expect(@dieta_vasca.min).to eq(@pa22)
+			expect(@dieta_espanola.min).to eq(@pa11)
+			expect(@dieta_vegetaria.min).to eq(@pa31)
+			expect(@dieta_vegetariana.min).to eq(@pa41)
+			expect(@dieta_carne.min).to eq(@pa51)
 		end
 
 		it "Metodo max" do
 			expect(@dieta_vasca.max).to eq(@pa2)
+			expect(@dieta_espanola.max).to eq(@pa1)
+                        expect(@dieta_vegetaria.max).to eq(@pa3)
+                        expect(@dieta_vegetariana.max).to eq(@pa4)
+                        expect(@dieta_carne.max).to eq(@pa5)
 		end
 		
 		it "Metodo select" do
                         expect(@dieta_vasca.select {|i|}).to eq([])
+			expect(@dieta_espanola.select {|i|}).to eq([])
+			expect(@dieta_vegetaria.select {|i|}).to eq([])
+			expect(@dieta_vegetariana.select {|i|}).to eq([])
+			expect(@dieta_carne.select {|i|}).to eq([])
                 end
 
                 it "Metodo collect" do
                         expect(@dieta_vasca.collect {|i| (i.vct+0).round(2)}).to eq([492.3, 492.3, 423.1, 380])
-
+			expect(@dieta_espanola.collect {|i| (i.vct+0).round(2)}).to eq([984.5, 984.5, 224.6])
+			expect(@dieta_vegetaria.collect {|i| (i.vct+0).round(2)}).to eq([433.2, 433.2, 216.6, 310.8])
+			expect(@dieta_vegetariana.collect {|i| (i.vct+0).round(2)}).to eq([1527.0, 1527.0, 650.4])
+			expect(@dieta_carne.collect {|i| (i.vct+0).round(2)}).to eq([535.4, 535.4, 267.7])
 		end
 	        
 		it "Metodo sort" do
