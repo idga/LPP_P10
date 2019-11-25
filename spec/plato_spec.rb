@@ -15,9 +15,14 @@ RSpec.describe PlatoEnergia do
                 @a10 = Alimento.new("Huevo",13.0,1.1,11.0,4.2,5.7)
                 @a11 = Alimento.new("Tofu",8.0,1.9,4.8,2.0,2.2)
 
-		@v1 = [@a1,@a2,@a3]
+		# Lista de ejemplo
+		@l1 = List.new()
+		@l1.insert(@a1)
+		@l1.insert(@a2)
+		@l1.insert(@a3)
 
-		@pe1 = PlatoEnergia.new(@v1)
+		# Plato de ejemplo
+		@pe1 = PlatoEnergia.new(@l1)
 
 	end
 
@@ -29,6 +34,10 @@ RSpec.describe PlatoEnergia do
 
 		it "Existe conjunto de alimentos" do
 			expect(@pe1.alimentos).not_to be nil
+		end
+
+		it "Existe conjunto de cantidades de alimentos en gramos" do
+			expect(@pe1.gramos).not_to be nil
 		end
 	end
 

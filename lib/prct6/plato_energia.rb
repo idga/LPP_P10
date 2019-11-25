@@ -1,9 +1,8 @@
 class PlatoEnergia
 
-	alimentos = []
+	alimentos = List.new()
 
 	attr_accessor :alimentos
-
 	
 	def initialize(a)
 		@alimentos = a
