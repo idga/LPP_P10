@@ -123,7 +123,7 @@ RSpec.describe List do
 	context 'Recorrido' do
 
 		it "Metodo min" do
-			expect(@dieta_espanola.min).to eq(0)
+			expect(@dieta_espanola.min).to eq(@a1)
 		end
 	end
 end
