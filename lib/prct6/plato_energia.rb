@@ -59,4 +59,14 @@ class PlatoEnergia
 
 		(cantidad/total)*100
 	end
+
+	def vct
+		cont = 0
+
+		@alimentos.each do |i|
+			cont += i.valorE()
+		end
+
+		return cont
+	end
 end

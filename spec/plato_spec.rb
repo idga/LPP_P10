@@ -57,7 +57,7 @@ RSpec.describe PlatoEnergia do
 		end
 
 		it "Valor Calorico Total" do
-			expect(@pe.vct.round(2)).to eq(10)
+			expect(@pe.vct.round(2)).to eq(688.0)
 		end
 	end	
 end
