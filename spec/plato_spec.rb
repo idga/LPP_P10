@@ -50,7 +50,7 @@ RSpec.describe PlatoEnergia do
 		end
 
 		it "Porcentaje hidratos de carbono" do
-			expect(@pe.pcarbohidratos.round(2)).to eq(10)
+			expect(@pe.pcarbohidratos.round(2)).to eq(4.26)
 		end
 	end	
 end

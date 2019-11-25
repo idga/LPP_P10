@@ -44,4 +44,19 @@ class PlatoEnergia
 
 		(cantidad/total)*100
 	end
+
+	def pcarbohidratos
+		cantidad = 0
+		total = 0
+
+		@gramos.each do |i|
+			total += i
+		end
+
+		@alimentos.each do |j|
+			cantidad += j.carbohidratos
+		end
+
+		(cantidad/total)*100
+	end
 end
