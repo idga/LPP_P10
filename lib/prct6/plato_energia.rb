@@ -1,5 +1,7 @@
 class PlatoEnergia
-
+	
+	include Comparable
+	
 	attr_accessor :alimentos, :gramos
 
 	@alimentos = List.new()
@@ -76,5 +78,9 @@ class PlatoEnergia
 		end
 
 		return "---------"
+	end
+
+	def <=>(other)
+		self.vct <=> other.vct
 	end
 end

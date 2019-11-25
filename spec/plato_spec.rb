@@ -28,6 +28,33 @@ RSpec.describe PlatoEnergia do
 		# Plato de ejemplo (hijo)
 		@pe2 = PlatoAmbiental.new(@l1)
 
+
+		#### Dietas ####
+
+		@dieta_espanola = List.new()
+		@al1 = [@a1,@a2,@a8,@a10]    # Alimentos <- Alimento
+		@pa1 = PlatoAmbiental.new(@al1) # Plato <- Alimentos
+		@dieta_espanola.insert(@pa1) # Dieta <- Plato
+
+               	# Dieta vasca
+                @dieta_vasca = List.new()
+		@al2 = [@a1,@a1,@a1,@a10]
+                @pa2 = PlatoAmbiental.new(@al2)
+                
+		# Dieta vegetaria
+                @dieta_vegetaria = List.new()
+                @al3 = [@a10,@a10,@a3,@a3]
+                @pa3 = PlatoAmbiental.new(@al3)
+                
+		# Dieta vegetariana
+                @dieta_vegetariana = List.new()
+                @al4 = [@a5,@a7,@a8,@a9,@a11]
+                @pa4 = PlatoAmbiental.new(@al4)
+                
+		# Dieta carne
+                @dieta_carne = List.new()
+                @al5 = [@a1,@a1,@a10,@a10]
+                @pa5 = PlatoAmbiental.new(@al5)
 	end
 
 	context 'Estructura plato' do
@@ -95,6 +122,20 @@ RSpec.describe PlatoEnergia do
 			expect(@pe2).to be_a_kind_of(PlatoAmbiental)
 			expect(@pe2).to be_a_kind_of(PlatoEnergia)
 		end
+	end
 
-	end	
+	context 'Comparacion de platos' do
+
+		it "Prueba <" do
+			expect(@pa2 < @pa1).to be true
+		end
+
+		it "Prueba >" do
+			expect(@pa1 > @pa2).to be true
+		end
+
+		it "Prueba ==" do
+			expect(@pa1 == @pa1).to be true
+		end
+	end
 end
