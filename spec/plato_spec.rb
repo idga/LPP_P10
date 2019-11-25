@@ -39,8 +39,15 @@ RSpec.describe PlatoEnergia do
                	# Dieta vasca
                 @dieta_vasca = List.new()
 		@al2 = [@a1,@a1,@a1,@a10]
+		@al21 = [@a10,@a10,@a1]
+		@al22 = [@a1,@a1,@a10]
                 @pa2 = PlatoAmbiental.new(@al2)
-                
+		@pa21 = PlatoAmbiental.new(@al21)
+		@pa22 = PlatoAmbiental.new(@al22)
+		@dieta_vasca.insert(@pa2)
+		@dieta_vasca.insert(@pa21)
+		@dieta_vasca.insert(@pa22)                
+
 		# Dieta vegetaria
                 @dieta_vegetaria = List.new()
                 @al3 = [@a10,@a10,@a3,@a3]
@@ -137,5 +144,28 @@ RSpec.describe PlatoEnergia do
 		it "Prueba ==" do
 			expect(@pa1 == @pa1).to be true
 		end
+	end
+	
+	context 'Enumeracion de platos' do
+		it "Metodo min" do
+			expect(@dieta_vasca.min).to eq(@pa22)
+		end
+
+		it "Metodo max" do
+			expect(@dieta_vasca.max).to eq(@pa2)
+		end
+		
+		it "Metodo select" do
+                        expect(@dieta_vasca.select {|i|}).to eq([])
+                end
+
+                it "Metodo collect" do
+                        expect(@dieta_vasca.collect {|i| (i.vct+0).round(2)}).to eq([492.3, 492.3, 423.1, 380])
+
+		end
+	        
+		it "Metodo sort" do
+                        expect(@dieta_vasca.sort).to eq([@pa22,@pa21,@pa2,@pa2])
+                end   
 	end
 end
