@@ -1,15 +1,15 @@
-RSpec.describe Plato do
+RSpec.describe PlatoEnergia do
 
 
 	before :each do
-		@p1 = Plato.new()
+		@pe1 = PlatoEnergia.new()
 
 	end
 
 	context 'Estructura plato' do
 
 		it "Existe plato" do
-			expect(@p1).not_to be nil
+			expect(@pe1).not_to be nil
 		end
 	end
 end
