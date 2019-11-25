@@ -25,6 +25,9 @@ RSpec.describe PlatoEnergia do
 		@pe = PlatoEnergia.new(@l1)
 		@pe.set_gramos()
 
+		# Plato de ejemplo (hijo)
+		@pe2 = PlatoAmbiental.new()
+
 	end
 
 	context 'Estructura plato' do
@@ -62,6 +65,13 @@ RSpec.describe PlatoEnergia do
 
 		it "Plato formateado" do
 			expect(@pe.to_s).not_to be nil
+		end
+	end
+
+	context 'Pruebas plato ambiental' do
+		
+		it "Valor GEI" do
+			expect(@pe2.gei.round(2)).to eq(10)
 		end
 	end	
 end
