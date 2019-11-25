@@ -30,6 +30,11 @@ class Alimento
 		@carbohidratos * 4 + @lipidos * 9 + @proteinas * 4
 	end
 
+	def cantidad()
+
+		@proteinas + @carbohidratos + @lipidos
+	end
+
 	def <=>(other)
 		self.valorE() <=> other.valorE()
 	end

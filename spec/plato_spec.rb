@@ -22,22 +22,23 @@ RSpec.describe PlatoEnergia do
 		@l1.insert(@a3)
 
 		# Plato de ejemplo
-		@pe1 = PlatoEnergia.new(@l1)
+		@pe = PlatoEnergia.new(@l1)
 
 	end
 
 	context 'Estructura plato' do
 
 		it "Existe plato" do
-			expect(@pe1).not_to be nil
+			expect(@pe).not_to be nil
 		end
 
 		it "Existe conjunto de alimentos" do
-			expect(@pe1.alimentos).not_to be nil
+			expect(@pe.alimentos).not_to be nil
 		end
 
 		it "Existe conjunto de cantidades de alimentos en gramos" do
-			expect(@pe1.gramos).not_to be nil
+			@pe.set_gramos()
+			expect(@pe.gramos).not_to be nil
 		end
 	end
 
