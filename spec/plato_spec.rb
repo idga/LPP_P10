@@ -42,7 +42,7 @@ RSpec.describe PlatoEnergia do
 		end
 	end
 
-	context 'Cantidades' do
+	context 'Informacion' do
 
 		it "Porcentaje proteinas" do
 			expect(@pe.pproteinas.round(2)).to be(49.23)
@@ -58,6 +58,10 @@ RSpec.describe PlatoEnergia do
 
 		it "Valor Calorico Total" do
 			expect(@pe.vct.round(2)).to eq(688.0)
+		end
+
+		it "Plato formateado" do
+			expect(@pe.to_s).not_to be nil
 		end
 	end	
 end
