@@ -69,4 +69,12 @@ class PlatoEnergia
 
 		return cont
 	end
+
+	def to_s
+		@alimentos.each do |i|
+			puts i.nombre
+		end
+
+		return "---------"
+	end
 end
