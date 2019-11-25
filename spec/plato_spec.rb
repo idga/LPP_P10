@@ -73,5 +73,9 @@ RSpec.describe PlatoEnergia do
 		it "Valor GEI" do
 			expect(@pe2.gei.round(2)).to eq(114.2)
 		end
+
+		it "Estimacion terreno" do
+			expect(@pe2.terreno.round(2)).to eq(10)
+		end
 	end	
 end
