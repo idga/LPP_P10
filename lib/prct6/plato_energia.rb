@@ -29,4 +29,19 @@ class PlatoEnergia
 
 		(cantidad/total)*100
 	end
+
+	def plipidos
+		cantidad = 0
+		total = 0
+
+		@gramos.each do |i|
+			total += i
+		end
+
+		@alimentos.each do |j|
+			cantidad += j.lipidos
+		end
+
+		(cantidad/total)*100
+	end
 end

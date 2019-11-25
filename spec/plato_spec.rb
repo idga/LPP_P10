@@ -46,7 +46,7 @@ RSpec.describe PlatoEnergia do
 		end
 
 		it "Porcentaje lipidos" do
-			expect(@pe.plipidos.round(2)).to eq(10)
+			expect(@pe.plipidos.round(2)).to eq(29.61)
 		end
 	end	
 end
