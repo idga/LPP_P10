@@ -42,7 +42,7 @@ RSpec.describe PlatoEnergia do
 		end
 
 		it "Porcentaje proteinas" do
-			expect(@pe.pproteinas).to be(10)
+			expect(@pe.pproteinas.round(2)).to be(49.23)
 		end
 	end	
 end

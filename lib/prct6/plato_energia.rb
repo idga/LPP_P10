@@ -14,4 +14,19 @@ class PlatoEnergia
 			@gramos.insert(i.cantidad) 
 		end
 	end
+
+	def pproteinas
+		cantidad = 0
+		total = 0
+		
+		@gramos.each do |i|
+			total += i
+		end
+
+		@alimentos.each do |j|
+			cantidad += j.proteinas
+		end
+
+		(cantidad/total)*100
+	end
 end
