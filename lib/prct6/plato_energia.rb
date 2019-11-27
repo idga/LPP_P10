@@ -74,10 +74,8 @@ class PlatoEnergia
 
 	def to_s
 		@alimentos.each do |i|
-			puts i.nombre
+			"#{i.nombre}"
 		end
-
-		return "---------"
 	end
 
 	def <=>(other)
