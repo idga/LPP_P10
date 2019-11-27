@@ -5,16 +5,14 @@ class PlatoEnergia
 	attr_accessor :alimentos, :gramos
 
 	@alimentos = List.new()
+	@gramos = List.new()
 
 	def initialize(a)
 		@alimentos = a
 	end
 
-	def set_gramos
-		@gramos = List.new()
-		@alimentos.each do |i|
-			@gramos.insert(i.cantidad) 
-		end
+	def set_gramos(g)
+		@gramos = g
 	end
 
 	def pproteinas

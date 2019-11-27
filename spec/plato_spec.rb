@@ -23,7 +23,8 @@ RSpec.describe PlatoEnergia do
 
 		# Plato de ejemplo
 		@pe = PlatoEnergia.new(@l1)
-		@pe.set_gramos()
+		@ge = [100,100,100]
+		@pe.set_gramos(@ge)
 
 		# Plato de ejemplo (hijo)
 		@pe2 = PlatoAmbiental.new(@l1)
@@ -100,15 +101,15 @@ RSpec.describe PlatoEnergia do
 	context 'Informacion' do
 
 		it "Porcentaje proteinas" do
-			expect(@pe.pproteinas.round(2)).to be(49.23)
+			expect(@pe.pproteinas.round(2)).to be(23.5)
 		end
 
 		it "Porcentaje lipidos" do
-			expect(@pe.plipidos.round(2)).to eq(29.61)
+			expect(@pe.plipidos.round(2)).to eq(14.13)
 		end
 
 		it "Porcentaje hidratos de carbono" do
-			expect(@pe.pcarbohidratos.round(2)).to eq(4.26)
+			expect(@pe.pcarbohidratos.round(2)).to eq(2.03)
 		end
 
 		it "Valor Calorico Total" do
