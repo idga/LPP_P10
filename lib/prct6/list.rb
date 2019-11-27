@@ -4,6 +4,8 @@ class List
 	
 	attr_accessor :dato, :head, :tail
 
+	include Enumerable
+
 	def initialize()
 		@head = nil
 		@tail = nil
@@ -100,5 +102,15 @@ class List
 			n = n.next
 		end
 		return cont
+	end
+
+	def each
+
+		yield @head.dato
+		n = @head
+		while(!n.nil?)
+			yield n.dato
+			n = n.next
+		end
 	end
 end
