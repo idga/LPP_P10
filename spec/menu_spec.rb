@@ -81,5 +81,9 @@ RSpec.describe PlatoEnergia do
 		it "Carbono total" do
 			expect(@menu.inject(0){|c,m| c + m.gei()}).to eq(133.26)
 		end
+		
+		it "Plato con mayor Huella Nutricional" do
+			expect(@menu.max).to eq(@p1)
+		end
 	end
 end

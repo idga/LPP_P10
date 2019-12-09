@@ -37,4 +37,6 @@ class PlatoAmbiental < PlatoEnergia
 	
 		(self.indice_energia + self.indice_carbono)/2
 	end
+	
+
 end
