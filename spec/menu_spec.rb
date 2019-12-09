@@ -22,7 +22,7 @@ RSpec.describe PlatoEnergia do
 		@l1.insert(@a6)
 		@l1.insert(@a7)
 		
-		@p1 = PlatoEnergia.new(@l1)
+		@p1 = PlatoAmbiental.new(@l1)
 		
 		# Precios
 		@lp = List.new()
@@ -30,5 +30,11 @@ RSpec.describe PlatoEnergia do
 		@lp.insert(5.60)
 		@lp.insert(8.70)
 		@lp.insert(2.50)
+	end
+	
+	
+	context 'Huella nutricional' do
+	
+		expect(@p1.indice_energia()). to eq(1)
 	end
 end
