@@ -38,5 +38,7 @@ class PlatoAmbiental < PlatoEnergia
 		(self.indice_energia + self.indice_carbono)/2
 	end
 	
-
+	def <=>(other)
+		self.huella_nutricional <=> other.huella_nutricional
+	end
 end

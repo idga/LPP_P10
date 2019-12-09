@@ -83,7 +83,7 @@ RSpec.describe PlatoEnergia do
 		end
 		
 		it "Plato con mayor Huella Nutricional" do
-			expect(@menu.max).to eq(@p1)
+			expect(@menu.max).to eq(@p2)
 		end
 	end
 end
