@@ -19,4 +19,17 @@ class PlatoAmbiental < PlatoEnergia
 		end
 		return cont
 	end
+	
+	def indice_carbono
+	
+		v = self.gei
+		
+		if v < 800
+			return 1
+		elsif v >= 800 && v <= 1200
+			return 2
+		else
+			return 3
+		end
+	end
 end
