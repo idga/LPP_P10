@@ -67,7 +67,7 @@ RSpec.describe PlatoEnergia do
 		
 		it "Huella nutricional" do
 			expect(@p1.huella_nutricional()).to eq(1)
-			expect(@p2.huella_nutricional()).to eq(1)
+			expect(@p2.huella_nutricional()).to eq(2)
 			expect(@p3.huella_nutricional()).to eq(1)
 		end
 	end
