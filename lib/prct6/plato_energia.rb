@@ -1,3 +1,18 @@
+# Autor:: 	Isaac Daniel Garcia Armas
+# Web::		https://github.com/ULL-ESIT-LPP-1920/tdd-idga
+#
+# == Clase PlatoEnergia
+# Clase para representar un _Plato Energia_
+# * metodo initialize
+# * metodo set_gramos
+# * metodo pproteinas
+# * metodo plipidos
+# * metodo pcarbohidratos
+# * metodo vct
+# * metodo to_s
+# * metodo <=>
+# * metodo indice_energia
+
 class PlatoEnergia
 	
 	include Comparable

@@ -1,3 +1,21 @@
+# = list.rb
+#
+# Autor:: 	Isaac Daniel Garcia Armas
+# Web::		https://github.com/ULL-ESIT-LPP-1920/tdd-idga
+#
+# == Clase List
+# Clase para representar una _Lista_
+# * metodo initialize
+# * metodo insert
+# * metodo empty
+# * metodo shift
+# * metodo pop
+# * metodo size
+# * metodo to_s
+# * metodo gei
+# * metodo terreno
+# * metodo each
+
 Node = Struct.new(:dato, :next, :prev)
 
 class List

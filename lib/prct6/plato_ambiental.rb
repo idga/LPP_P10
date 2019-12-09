@@ -1,3 +1,15 @@
+# Autor:: 	Isaac Daniel Garcia Armas
+# Web::		https://github.com/ULL-ESIT-LPP-1920/tdd-idga
+#
+# == Clase PlatoAmbiental
+# Clase para representar un _Plato Ambiental_ a partir de un _Plato Energia_
+# * metodo initialize
+# * metodo gei
+# * metodo terreno
+# * metodo indice_carbono
+# * metodo huella_nutricional
+# * metodo <=>
+
 class PlatoAmbiental < PlatoEnergia
 
 	def initialize(a)

@@ -1,3 +1,14 @@
+# Autor:: 	Isaac Daniel Garcia Armas
+# Web::		https://github.com/ULL-ESIT-LPP-1920/tdd-idga
+#
+# == Clase Alimento
+# Clase para representar un _Alimento_
+# * metodo initialize
+# * metodo to_s
+# * metodo valorE
+# * metodo cantidad
+# * metodo <=>
+
 require "prct6/version"
 
 class Alimento
