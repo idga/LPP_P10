@@ -17,19 +17,11 @@ class PlatoAmbiental < PlatoEnergia
 	end
 
 	def gei
-		cont = 0
-		@alimentos.each do |i|
-			cont += i.gei
-		end
-		return cont
+		@alimentos.inject(0){|c,a| c + a.gei()}
 	end
 
 	def terreno
-		cont = 0
-		@alimentos.each do |i|
-			cont += i.terreno
-		end
-		return cont
+		@alimentos.inject(0){|c,a| c + a.terreno()}
 	end
 	
 	def indice_carbono

@@ -76,13 +76,7 @@ class PlatoEnergia
 	end
 
 	def vct
-		cont = 0
-
-		@alimentos.each do |i|
-			cont += i.valorE()
-		end
-
-		return cont
+		@alimentos.inject(0){|c,a| c + a.valorE()}
 	end
 
 	def to_s
