@@ -86,4 +86,12 @@ RSpec.describe PlatoEnergia do
 			expect(@menu.max).to eq(@p2)
 		end
 	end
+	
+	context 'Precios' do
+		
+		it "Aumento de precios" do
+			aumento = [1.10,1.20,1.30]
+			expect(@precios.collect{|p| p * aumento[@menu.max.huella_nutricional-1]}).to eq([7.8,7.8,18.00,5.3999999999999995])
+		end
+	end
 end
