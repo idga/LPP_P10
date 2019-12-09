@@ -37,5 +37,9 @@ RSpec.describe PlatoEnergia do
 		it "Impacto Energia" do
 			expect(@p1.indice_energia()).to eq(2)
 		end
+		
+		it "Impacto Carbono" do
+			expect(@p1.indice_carbono()).to eq(1)
+		end
 	end
 end
