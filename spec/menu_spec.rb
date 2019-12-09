@@ -24,22 +24,56 @@ RSpec.describe PlatoEnergia do
 		
 		@p1 = PlatoAmbiental.new(@l1)
 		
+		@l2 = List.new()
+		@l2.insert(@a11)
+		@l2.insert(@a8)
+		@l2.insert(@a9)
+		
+		@p2 = PlatoAmbiental.new(@l2)
+		
+		@l3 = List.new()
+		@l3.insert(@a3)
+		@l3.insert(@a10)
+		@l3.insert(@a5)
+		
+		@p3 = PlatoAmbiental.new(@l3)
+		
+		# Menu
+		@menu = List.new()
+		@menu.insert(@p1)
+		@menu.insert(@p2)
+		@menu.insert(@p3)
+		
 		# Precios
-		@lp = List.new()
-		@lp.insert(1.0)
-		@lp.insert(5.60)
-		@lp.insert(8.70)
-		@lp.insert(2.50)
+		@precios = List.new()
+		@precios.insert(6.50)
+		@precios.insert(15.00)
+		@precios.insert(4.50)
 	end
 	
-	context 'Huella nutricional' do
+	context 'Huella nutricional - Plato' do
 		
 		it "Impacto Energia" do
 			expect(@p1.indice_energia()).to eq(2)
+			expect(@p2.indice_energia()).to eq(3)
+			expect(@p3.indice_energia()).to eq(1)
 		end
 		
 		it "Impacto Carbono" do
 			expect(@p1.indice_carbono()).to eq(1)
+			expect(@p2.indice_carbono()).to eq(1)
+			expect(@p3.indice_carbono()).to eq(1)
+		end
+	end
+	
+	context 'Huella nutricional - Menu' do
+	
+		it "Energia total" do
+			expect(@menu.inject(0){|c,m| c + m.vct()}).to eq(3061.0)
+		end
+		
+		it "Carbono total" do
+			expect(@menu.inject(0){|c,m| c + m.gei()}).to eq(133.26)
 		end
 	end
 end
