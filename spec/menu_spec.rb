@@ -64,6 +64,12 @@ RSpec.describe PlatoEnergia do
 			expect(@p2.indice_carbono()).to eq(1)
 			expect(@p3.indice_carbono()).to eq(1)
 		end
+		
+		it "Huella nutricional" do
+			expect(@p1.huella_nutricional()).to eq(1)
+			expect(@p2.huella_nutricional()).to eq(1)
+			expect(@p3.huella_nutricional()).to eq(1)
+		end
 	end
 	
 	context 'Huella nutricional - Menu' do
