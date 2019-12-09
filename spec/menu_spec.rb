@@ -32,9 +32,10 @@ RSpec.describe PlatoEnergia do
 		@lp.insert(2.50)
 	end
 	
-	
 	context 'Huella nutricional' do
-	
-		expect(@p1.indice_energia()). to eq(1)
+		
+		it "Impacto Energia" do
+			expect(@p1.indice_energia()).to eq(2)
+		end
 	end
 end

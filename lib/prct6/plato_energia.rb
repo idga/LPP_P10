@@ -79,4 +79,17 @@ class PlatoEnergia
 	def <=>(other)
 		self.vct <=> other.vct
 	end
+
+	def indice_energia
+	
+		v = self.vct
+		
+		if v < 670
+			return 1
+		elsif v >= 670 && v <= 830
+			return 2
+		else
+			return 3
+		end
+	end
 end
