@@ -1,10 +1,12 @@
 class PlatoDSL
 
-	attr_accessor :nombre, :alimentos, :gramos, :precios
+	attr_accessor :nombre, :ingredientes, :vn, :va
 	
-	def initialize(nombre, &block)
+	def initialize(nombre, vn, va, &block)
 	
 		@nombre = nombre
+		@vn = vn
+		@va = va
 		@ingredientes = []
 		
 		if block_given?  
@@ -18,8 +20,7 @@ class PlatoDSL
 	
 	def to_s
 		output = @nombre
-		output << "\n#{'-' * @nombre.size}\n"
-		output << "#{@ingredientes.join(', ')}\n"
+		output << " | Valor Nutricional: #{@vn} | Valor Ambiental: #{@va} | Ingredientes: #{@ingredientes.join(', ')}\n"
 		output
 	end     
 	
@@ -27,6 +28,8 @@ class PlatoDSL
 	def ingrediente(nombre, opcion = {})
 		ingrediente = nombre
 		ingrediente << " (#{opcion[:gramos]})" if opcion[:gramos]
+		@vn = " (#{opcion[:vn]})" if opcion[:vn]
+		@va = " (#{opcion[:va]})" if opcion[:va]
 		@ingredientes << ingrediente
 	end
 end

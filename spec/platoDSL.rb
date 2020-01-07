@@ -1,6 +1,0 @@
-class platoDSL
-
-	
-
-
-end

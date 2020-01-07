@@ -4,6 +4,7 @@ require "prct6/list"
 require "prct6/plato_energia"
 require "prct6/plato_ambiental"
 require "prct6/platoDSL"
+require "prct6/menuDSL"
 
 module Prct6
   class Error < StandardError; end
