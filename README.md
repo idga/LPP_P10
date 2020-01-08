@@ -11,3 +11,4 @@
 
   Se ha llevado a cabo haciendo uso de la metodología de Desarrollo Dirigido por Pruebas TDD.
 
+[![Coverage Status](https://coveralls.io/repos/github/idga/LPP_P10/badge.svg?branch=master)](https://coveralls.io/github/idga/LPP_P10?branch=master)
